@@ -37,13 +37,13 @@
 			// gameTimer
 			// 
 			this.gameTimer.Enabled = true;
-			this.gameTimer.Interval = 20;
+			this.gameTimer.Interval = 10;
 			this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
 			// 
 			// debugLabel
 			// 
 			this.debugLabel.AutoSize = true;
-			this.debugLabel.BackColor = System.Drawing.Color.White;
+			this.debugLabel.BackColor = System.Drawing.Color.Transparent;
 			this.debugLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.debugLabel.Font = new System.Drawing.Font("PKMN Mystery Dungeon", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.debugLabel.Location = new System.Drawing.Point(12, 9);
@@ -52,7 +52,7 @@
 			this.debugLabel.TabIndex = 0;
 			this.debugLabel.Text = "DEBUG";
 			// 
-			// MysteryDungeon
+			// MysteryDungeonForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -61,7 +61,7 @@
 			this.Controls.Add(this.debugLabel);
 			this.DoubleBuffered = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Name = "MysteryDungeon";
+			this.Name = "MysteryDungeonForm";
 			this.Text = "Pokémon Mystery Dungeon";
 			this.Paint += new System.Windows.Forms.PaintEventHandler(this.MysteryDungeon_Paint);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MysteryDungeon_KeyDown);

@@ -20,9 +20,9 @@ namespace MysteryDungeon
 		#endregion
 
 		#region Integers
-		int playerX;
-		int playerY;
-		int runspeed = 1;
+		int playerX = -109;
+		int playerY = 243;
+		int runspeed = 2;
 		#endregion
 
 		#region Booleans
@@ -37,7 +37,9 @@ namespace MysteryDungeon
 		#endregion
 
 		#region rectangles boi
-		Rectangle debug = new Rectangle(0, 0, 240, 20);
+		Rectangle debug = new Rectangle(0, 256, 54, 47);
+		Rectangle debug1 = new Rectangle(98, 280, 20, 11);
+		Rectangle debug2 = new Rectangle(0, 343, 216, 376);
 		#endregion
 
 		#region Key Bools
@@ -62,9 +64,13 @@ namespace MysteryDungeon
 		private void Collider() //Collision Data stored here
 		{
 			debug.X = 0 - playerX;
-			debug.Y = 0 - playerY;
+			debug.Y = 256 - playerY;
+			debug1.X = 98 - playerX;
+			debug1.Y = 280 - playerY;
+			debug2.X = 0 - playerX;
+			debug2.Y = 343 - playerY;
 
-			if (Player.Collision(debug))
+			if (Player.Collision(debug)|| Player.Collision(debug1) || Player.Collision(debug2))
 			{
 				switch (Player.direction)
 				{
@@ -323,11 +329,11 @@ namespace MysteryDungeon
 			{
 				if (bButton)
 				{
-					runspeed = 4;
+					runspeed = 8;
 				}
 				else
 				{
-					runspeed = 1;
+					runspeed = 4;
 				}
 				gameTimer.Interval = 2;
 
@@ -399,7 +405,7 @@ namespace MysteryDungeon
 			Pen colliPen = new Pen(Color.Red);
 
 			e.Graphics.DrawImage(Properties.Resources.generic_ground, (108 - playerX), (68 - playerY), 24, 24);
-			e.Graphics.DrawImage(Properties.Resources.pkmnsqre, (9 - playerX), (-313 - playerY), 958, 719);
+			e.Graphics.DrawImage(Properties.Resources.pkmnsqre, (0 - playerX), (0 - playerY), 958, 719);
 
 			#region Direction Player
 			Player.MoveGraphics();
@@ -442,6 +448,8 @@ namespace MysteryDungeon
 			#endregion
 
 			e.Graphics.DrawRectangle(colliPen, debug);
+			e.Graphics.DrawRectangle(colliPen, debug1);
+			e.Graphics.DrawRectangle(colliPen, debug2);
 		}
 
 	}
