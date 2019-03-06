@@ -404,6 +404,7 @@ namespace MysteryDungeon
 			#region Direction Player
 			Player.MoveGraphics();
 			e.Graphics.DrawImage(Player.sprite, Player.x, Player.y, Player.size, Player.size);
+			e.Graphics.DrawImage(Partner.sprite, Partner.x, Partner.y, Partner.size, Partner.size);
 
 			//if (direction == "up")
 			//{

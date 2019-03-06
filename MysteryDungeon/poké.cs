@@ -36,42 +36,84 @@ namespace MysteryDungeon
 			//spdef = _spdef;
 		}
 
+		public void TheorheticalGraphics()
+		{
+
+		}
+
 		public void MoveGraphics()
 		{
+			#region Graphics
+			Image fSprite = null;
+			Image bSprite = null;
+			Image lSprite = null;
+			Image rSprite = null;
+			//Diagonals
+			Image flSprite = null;
+			Image frSprite = null;
+			Image blSprite = null;
+			Image brSprite = null;
+
+			if (name == "Treecko")
+			{
+				fSprite = Properties.Resources.treecko_F;
+				bSprite = Properties.Resources.treecko_B;
+				lSprite = Properties.Resources.treecko_L;
+				rSprite = Properties.Resources.treecko_R;
+
+				flSprite = Properties.Resources.treecko_fl;
+				frSprite = Properties.Resources.treecko_fr;
+				blSprite = Properties.Resources.treecko_bl;
+				brSprite = Properties.Resources.treecko_br;
+			}
+
+			if (name == "Torchic")
+			{
+				fSprite = Properties.Resources.Torchic_F;
+				bSprite = Properties.Resources.Torchic_B;
+				lSprite = Properties.Resources.Torchic_L;
+				rSprite = Properties.Resources.Torchic_R;
+
+				flSprite = Properties.Resources.Torchic_fl;
+				frSprite = Properties.Resources.Torchic_fr;
+				blSprite = Properties.Resources.Torchic_bl;
+				brSprite = Properties.Resources.Torchic_br;
+			}
+			#endregion
 
 			#region Directions
 			if (direction == "up")
 			{
-				sprite = Properties.Resources.treecko_B;
+				sprite = bSprite;
 			}
 			if (direction == "left")
 			{
-				sprite = Properties.Resources.treecko_L;
+				sprite = lSprite;
 			}
 			if (direction == "right")
 			{
-				sprite = Properties.Resources.treecko_R;
+				sprite = rSprite;
 			}
 			if (direction == "down")
 			{
-				sprite = Properties.Resources.treecko_F;
+				sprite = fSprite;
 			}
 
 			if (direction == "upleft")
 			{
-				sprite = Properties.Resources.treecko_bl;
+				sprite = blSprite;
 			}
 			if (direction == "downleft")
 			{
-				sprite = Properties.Resources.treecko_fl;
+				sprite = flSprite;
 			}
 			if (direction == "upright")
 			{
-				sprite = Properties.Resources.treecko_br;
+				sprite = brSprite;
 			}
 			if (direction == "downright")
 			{
-				sprite = Properties.Resources.treecko_fr;
+				sprite = frSprite;
 			}
 			#endregion
 		}
