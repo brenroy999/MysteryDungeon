@@ -37,9 +37,23 @@ namespace MysteryDungeon
 		#endregion
 
 		#region rectangles boi
-		Rectangle debug = new Rectangle(0, 256, 54, 47);
+		Rectangle debug = new Rectangle(0, 256, 58, 47);
 		Rectangle debug1 = new Rectangle(98, 280, 20, 11);
 		Rectangle debug2 = new Rectangle(0, 343, 216, 376);
+		Rectangle debug3 = new Rectangle(128, 223, 57, 83);
+		Rectangle debug4 = new Rectangle(0, 223, 28, 34);
+		Rectangle debug5 = new Rectangle(0, 0, 185, 223);
+		Rectangle debug6 = new Rectangle(184, 0, 96, 306);
+		Rectangle debug7 = new Rectangle(279, 0, 42, 268);
+		Rectangle debug8 = new Rectangle(320, 0, 56, 304);
+		Rectangle debug9 = new Rectangle(375, 0, 50, 263);
+		Rectangle debug10 = new Rectangle(407, 280, 18, 24);
+		Rectangle debug11 = new Rectangle(424, 0, 16, 304);
+		Rectangle debug12 = new Rectangle(439, 0, 19, 120);
+		Rectangle debug13 = new Rectangle(457, 0, 24, 57);
+		Rectangle debug14 = new Rectangle(215, 369, 88, 350);
+		Rectangle debug15 = new Rectangle(279, 344, 113, 129);
+		Rectangle debug16 = new Rectangle(302, 647, 66, 49);
 		#endregion
 
 		#region Key Bools
@@ -63,14 +77,62 @@ namespace MysteryDungeon
 
 		private void Collider() //Collision Data stored here
 		{
+
+			#region Boxes
 			debug.X = 0 - playerX;
 			debug.Y = 256 - playerY;
+
 			debug1.X = 98 - playerX;
 			debug1.Y = 280 - playerY;
+
 			debug2.X = 0 - playerX;
 			debug2.Y = 343 - playerY;
 
-			if (Player.Collision(debug)|| Player.Collision(debug1) || Player.Collision(debug2))
+			debug3.X = 128 - playerX;
+			debug3.Y = 223 - playerY;
+
+			debug4.X = 0 - playerX;
+			debug4.Y = 223 - playerY;
+
+			debug5.X = 0 - playerX;
+			debug5.Y = 0 - playerY;
+
+			debug6.X = 184 - playerX;
+			debug6.Y = 0 - playerY;
+
+			debug7.X = 279 - playerX;
+			debug7.Y = 0 - playerY;
+
+			debug8.X = 320 - playerX;
+			debug8.Y = 0 - playerY;
+
+			debug9.X = 375 - playerX;
+			debug9.Y = 0 - playerY;
+
+			debug10.X = 407 - playerX;
+			debug10.Y = 280 - playerY;
+
+			debug11.X = 424 - playerX;
+			debug11.Y = 0 - playerY;
+			#endregion
+
+			if (Player.Collision(debug) ||
+				Player.Collision(debug1) ||
+				Player.Collision(debug2) ||
+				Player.Collision(debug3) ||
+				Player.Collision(debug4) ||
+				Player.Collision(debug5) ||
+				Player.Collision(debug6) ||
+				Player.Collision(debug7) ||
+				Player.Collision(debug8) ||
+				Player.Collision(debug9) ||
+				Player.Collision(debug10) ||
+				Player.Collision(debug11) ||
+				Player.Collision(debug12) ||
+				Player.Collision(debug13) ||
+				Player.Collision(debug14) ||
+				Player.Collision(debug15) ||
+				Player.Collision(debug16))
 			{
 				switch (Player.direction)
 				{
@@ -409,47 +471,20 @@ namespace MysteryDungeon
 
 			#region Direction Player
 			Player.MoveGraphics();
-			e.Graphics.DrawImage(Player.sprite, Player.x, Player.y, Player.size, Player.size);
-			e.Graphics.DrawImage(Partner.sprite, Partner.x, Partner.y, Partner.size, Partner.size);
+			e.Graphics.DrawImage(Player.sprite, Player.x, Player.y-6, Player.size, Player.size);
+			e.Graphics.DrawImage(Partner.sprite, Partner.x, Partner.y-6, Partner.size, Partner.size);
 
-			//if (direction == "up")
-			//{
-			//	e.Graphics.DrawImage(Properties.Resources.treecko_B, player);
-			//}
-			//if (direction == "down")
-			//{
-			//	e.Graphics.DrawImage(Properties.Resources.treecko_F, player);
-			//}
-			//if (direction == "right")
-			//{
-			//	e.Graphics.DrawImage(Properties.Resources.treecko_R, player);
-			//}
-			//if (direction == "left")
-			//{
-			//	e.Graphics.DrawImage(Properties.Resources.treecko_L, player);
-			//}
-
-			//if (direction == "upleft")
-			//{
-			//	e.Graphics.DrawImage(Properties.Resources.treecko_bl, player);
-			//}
-			//if (direction == "downleft")
-			//{
-			//	e.Graphics.DrawImage(Properties.Resources.treecko_fl, player);
-			//}
-			//if (direction == "upright")
-			//{
-			//	e.Graphics.DrawImage(Properties.Resources.treecko_br, player);
-			//}
-			//if (direction == "downright")
-			//{
-			//	e.Graphics.DrawImage(Properties.Resources.treecko_fr, player);
-			//}
 			#endregion
 
 			e.Graphics.DrawRectangle(colliPen, debug);
 			e.Graphics.DrawRectangle(colliPen, debug1);
 			e.Graphics.DrawRectangle(colliPen, debug2);
+			e.Graphics.DrawRectangle(colliPen, debug3);
+			e.Graphics.DrawRectangle(colliPen, debug4);
+			e.Graphics.DrawRectangle(colliPen, debug5);
+			e.Graphics.DrawRectangle(colliPen, debug6);
+			e.Graphics.DrawRectangle(colliPen, debug7);
+			e.Graphics.DrawRectangle(colliPen, debug8);
 		}
 
 	}
