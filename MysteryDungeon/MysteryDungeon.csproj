@@ -168,5 +168,8 @@
   <ItemGroup>
     <None Include="Resources\Torchic\Torchic_R.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

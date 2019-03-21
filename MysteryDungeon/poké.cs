@@ -82,38 +82,39 @@ namespace MysteryDungeon
 			#endregion
 
 			#region Directions
-			if (direction == "up")
+			switch (direction)
 			{
-				sprite = bSprite;
-			}
-			if (direction == "left")
-			{
-				sprite = lSprite;
-			}
-			if (direction == "right")
-			{
-				sprite = rSprite;
-			}
-			if (direction == "down")
-			{
-				sprite = fSprite;
-			}
+				case "up":
+					sprite = bSprite;
+					break;
 
-			if (direction == "upleft")
-			{
-				sprite = blSprite;
-			}
-			if (direction == "downleft")
-			{
-				sprite = flSprite;
-			}
-			if (direction == "upright")
-			{
-				sprite = brSprite;
-			}
-			if (direction == "downright")
-			{
-				sprite = frSprite;
+				case "left":
+					sprite = lSprite;
+					break;
+
+				case "right":
+					sprite = rSprite;
+					break;
+
+				case "down":
+					sprite = fSprite;
+					break;
+
+				case "upleft":
+					sprite = blSprite;
+					break;
+
+				case "downleft":
+					sprite = flSprite;
+					break;
+
+				case "upright":
+					sprite = brSprite;
+					break;
+
+				case "downright":
+					sprite = frSprite;
+					break;
 			}
 			#endregion
 		}
