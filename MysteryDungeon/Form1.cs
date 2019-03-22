@@ -79,6 +79,7 @@ namespace MysteryDungeon
 
 		private void Collider() //Collision Data stored here
 		{
+			
 
 			#region Boxes
 			debug.X = 0 - playerX;
@@ -465,7 +466,7 @@ namespace MysteryDungeon
 			}
 			else
 			{
-				e.Graphics.DrawImage(Properties.Resources.dungeon, 0 - playerX, 0 - playerY, 768, 744);
+				e.Graphics.DrawImage(Properties.Resources.dungeon, -24 - playerX, 0 - playerY, 792, 744);
 			}
 
 			#region Direction Player
